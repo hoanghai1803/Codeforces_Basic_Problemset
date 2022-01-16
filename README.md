@@ -1,13 +1,13 @@
 # Codeforces Basic Problem Set
 Weekly competitive programming training for newbies based on the [Codeforces problem set](https://codeforces.com/problemset).
 
-Note that, this training problem set will not focus on training complex data structures and algorithms, but rather on developing computational thinking and coding skills for newbies.
+Note that, this training problem set will not focus on complex data structures and algorithms, but rather on developing computational thinking and coding skills for newbies.
 
 Feel free to ask (by creating issues) if you don't understand my solutions.
 
 ### Week 1
 
-| Name                                                                            | Solution                            |
+| Problem                                                                         | Solution                            |
 | -----------------------------------------------------------------------------   | ----------------------------------- |
 | [Integer Diversity](https://codeforces.com/contest/1616/problem/A)              | [1616A.cpp](./src/week_1/1616A.cpp) |
 | [Mirror in the String](https://codeforces.com/contest/1616/problem/B)           | [1616B.cpp](./src/week_1/1616B.cpp) |
