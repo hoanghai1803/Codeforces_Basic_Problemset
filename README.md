@@ -1,5 +1,7 @@
 # Codeforces Basic Problem Set
-Weekly competitive programming training for newbie ([Codeforces problem set](https://codeforces.com/problemset))
+Weekly competitive programming training for newbies based on the [Codeforces problem set](https://codeforces.com/problemset)
+
+Note that, this training problem set will not focus on training complex data structures and algorithms, but rather on developing computational thinking and coding skills for newbies.
 
 Feel free to ask (by creating issues) if you don't understand my solutions.
 

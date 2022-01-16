@@ -8,6 +8,8 @@
 
 ### Integer Diversity<br>
 Tags: *adhoc*.
+> Note that this problem has multiple testcases in each test. <br>
 > For each number in array we increase the *count* of its absolute value by 1. <br>
 > First, we assign result to 1 if there are 0s in array (count[0] > 0), otherwise assign to 0. <br>
-> Iterate i from 1 to 100, if *count* of i is greater than 1 then increase the result by 2, otherwise increase the result by count[i].
+> Iterate i from 1 to 100, if *count* of i is greater than 1 then increase the result by 2, otherwise increase the result by count[i]. <br>
+> Time complexity: *O(N)*.
