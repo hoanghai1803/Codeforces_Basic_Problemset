@@ -14,3 +14,5 @@ Feel free to ask (by creating issues) if you don't understand my solutions.
 | [Make AP](https://codeforces.com/contest/1624/problem/B)                        | [1624B.cpp](./src/week_1/1624B.cpp) |
 | [Division by Two and Permutation](https://codeforces.com/contest/1624/problem/C)| [1624C.cpp](./src/week_1/1624C.cpp) |
 | [Palindromes Coloring](https://codeforces.com/contest/1624/problem/D)           | [1624D.cpp](./src/week_1/1624D.cpp) |
+
+You can get hints for week 1 problem set [here](src/week_1/hint.md).
