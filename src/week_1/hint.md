@@ -32,7 +32,7 @@ Tags: *math*.
 > It is clear that in order for the obtained array is *good*, it must be an [Arithmetic Progression](https://en.wikipedia.org/wiki/Arithmetic_progression) (AP). <br>
 > Choose two fixed numbers in the array (using two nested loops), these two numbers will not be replaced when we convert the original array to AP. From the above two numbers, we can calculate the *common difference* of the AP. Count the number of operations need to convert this array to this AP. <br>
 > For each pair of fixed numbers we can calculate the number of operations *S*, the result will be the minimum value of the number of operations in all cases. <br>
-> Time complexity: *O(T * N^3)*
+> Time complexity: *O(T * N^3)*.
 
 ### [Plus One on the Subset](https://codeforces.com/contest/1624/problem/A)
 
@@ -55,9 +55,9 @@ Tags: *greedy, matching*.
 > We can use greedy algorithm in the official tutorial or use the *Kuhn's algorithm for Maximum Bipartite Matching* (refer [here](https://cp-algorithms.com/graph/kuhn_maximum_bipartite_matching.html)). <br>
 > The bipartite graph is created as follows:
 > - The first part is the original array, the second part is the numbers from *1* to *n*. <br>
-> - If the element *x* in the original array can be transformed to *y* (*<= n*) by *div 2* a certain number of times, then we add a directional arc from the this vertex in the first part to the vertex *y* in second part. <br>
+> - If the element *x* in the original array can be transformed to *y* (*<= n*) by *div 2* a certain number of times, then we add a directional arc from this vertex in the first part to the vertex *y* in the second part. <br>
 >
-> Then, for each test case, if the maximum matching is equal to *n* then the result is "True", otherwise "False". <br>
+> For each test case, if the maximum matching is equal to *n* then the result is "True", otherwise "False". <br>
 > Time complexity: *O(T * N^2)*.
 
 ### [Palindromes Coloring](https://codeforces.com/contest/1624/problem/D)
@@ -66,10 +66,10 @@ Tags: *greedy*.
 > Note that this problem has multiple test cases in each test. <br>
 > Count the number of occurrences of each character in the original string (from *'a'* to *'z'*). <br>
 > For each string of the same color obtained, in order for it to form a palindrome, each type of character (from *'a'* to *'z'*) in it must appear even times, if any type of character appears odd times, there must be only one. <br>
-> We will treat each color as a box, spread the characters evenly into the boxes in order from beginning to end, after reaching the last box, spread again from the beginning. This will ensure that the last box always has the fewest characters, but will have as many characters as possible. <br>
-> 1. For each type of character, spread its pairs into the boxes in order until only that 0 or 1 character remains. We call the position of the currently box after spreading each pair of the same characters as *pivot*. 
-> 2. From the *pivot*, spread the remaining character of each type of character (from *'a'* to *'z'*) to the last box. After spreading for the last box, if there are any characters left, we don't need to spread them again for the first boxes, because whether we do or not, the number of characters in them is also more than the number of characters in the last box, so it is not necessary. 
-> 3. If after the second step we still haven't spread to the last box, we can take one character from each box from the first box to the box immediately before the *pivot* to spread across the boxes from the current position to the end (because all characters in them appear even times). Actually this only needs to be handled by checking if the number of boxes from *1* to (*pivot - 1*) is more than the current number of boxes to the last box in *O(1)*, if yes simply increase *box[k]* by *1*.
+> We will treat each color as a box, spread the characters evenly into the boxes in order from beginning to end (*1 -> k*). After reaching the last box, spread again from the beginning. This will ensure that the last box always has the fewest characters, but will have as many characters as possible. <br>
+> 1. For each type of character, spread its pairs into the boxes in order until only that 0 or 1 character remains. We call the position of the currently box after spreading each pair of the same characters (*'a'->'z'*) as *pivot*. 
+> 2. From the *pivot*, spread the remaining character of each type of character (*'a'->'z'*) to the last box. After spreading for the last box, if there are any characters left, we don't need to spread them again for the first boxes, because whether we do or not, the number of characters in them are also more than the number of characters in the last box, so it is not necessary. 
+> 3. If after the second step we still haven't spread to the last box, we can take one character from each box from the first box to the box before the *pivot* to spread across the boxes from the current position to the end (because all characters in them appear even times). Actually this only needs to be handled by checking if the number of boxes from *1* to (*pivot - 1*) is more than the current number of boxes to the last box in *O(1)*, if yes simply increase *box[k]* by *1*.
 > 
 > Time complexity: *O(N)*.
 
@@ -77,8 +77,8 @@ Tags: *greedy*.
 
 Tags: *adhoc*.
 > Consider all character in string, there are 2 cases:
-> - If the character is a number, we will increment the result by 1 if it is odd.
-> - If it is a letter, we will increment the result by 1 if it is a vowel.
+> - If the character is a number, increment the result by 1 if it is odd.
+> - If it is a letter, increment the result by 1 if it is a vowel.
 >
 > Time complexity: *O(len(str))*.
 
