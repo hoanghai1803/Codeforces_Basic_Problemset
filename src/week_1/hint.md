@@ -85,7 +85,7 @@ Tags: *adhoc*.
 ### [New Year and Buggy Bot](https://codeforces.com/contest/908/problem/B)
 
 Tags: *graph traversal, adhoc*.
-> This is a basic graph problem, we just have to try all the mappings of digits to directions to count how many mapping would lead the robot to the exit. There are all *4!* ways to choose mapping.
+> This is a basic graph problem, we just have to try all the mappings of digits to directions to count how many mapping would lead the robot to the exit. There are all *4!* ways to choose mapping. <br>
 > Time complexity: *O(4! * |s|)*.
 
 ### [New Year and Curling](https://codeforces.com/contest/908/problem/C)
@@ -96,5 +96,6 @@ Tags: *geometry, adhoc*.
 > <p align="center">
 >   y[i] = max( y[i], y[j] + sqrt(sqr(2 * r) - sqr(x[i] - x[j])) )
 > </p>
+> 
 > Where *sqrt* = square root and *sqr* = square. The above geometrical formula is easy to prove.<br>
 > Time complexity: *O(N^2)*.
