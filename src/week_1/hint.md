@@ -93,7 +93,8 @@ Tags: *graph traversal, adhoc*.
 Tags: *geometry, adhoc*.
 > For each disk *i*, call *y[i]* is the *y-coordinate* of its center after pushed. Initially, y[i] = r (this is the case where *disk[i]* won't touch any disk). <br>
 > Iterate *j* from *1* to *(i - 1)* to check whether disk[i] will touches disk[j] when it slides or not. If not, simply continue. Otherwise, update: 
-> <center>y[i] = max( y[i], y[j] + sqrt(sqr(2 * r) - sqr(x[i] - x[j])) )</center>
-> 
+> <p align="center">
+>   y[i] = max( y[i], y[j] + sqrt(sqr(2 * r) - sqr(x[i] - x[j])) )
+> </p>
 > Where *sqrt* = square root and *sqr* = square. The above geometrical formula is easy to prove.<br>
 > Time complexity: *O(N^2)*.
