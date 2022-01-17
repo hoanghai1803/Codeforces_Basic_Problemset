@@ -3,6 +3,7 @@
 ## Official tutorial
 - Contest 1616's tutorial [here](https://codeforces.com/blog/entry/98501).
 - Contest 1624's tutorial [here](https://codeforces.com/blog/entry/98942).
+- Contest 908's tutorial [here](https://codeforces.com/blog/entry/56713).
 
 ## My tutorial
 
@@ -56,7 +57,7 @@ Tags: *greedy, matching*.
 > - The first part is the original array, the second part is the numbers from *1* to *n*. <br>
 > - If the element *x* in the original array can be transformed to *y* (*<= n*) by *div 2* a certain number of times, then we add a directional arc from the this vertex in the first part to the vertex *y* in second part. <br>
 >
-> Then, for each testcase, if the maximum matching is equal to *n* then the result is "True", otherwise "False". <br>
+> Then, for each test case, if the maximum matching is equal to *n* then the result is "True", otherwise "False". <br>
 > Time complexity: *O(T * N^2)*.
 
 ### [Palindromes Coloring](https://codeforces.com/contest/1624/problem/D)
@@ -68,6 +69,31 @@ Tags: *greedy*.
 > We will treat each color as a box, spread the characters evenly into the boxes in order from beginning to end, after reaching the last box, spread again from the beginning. This will ensure that the last box always has the fewest characters, but will have as many characters as possible. <br>
 > 1. For each type of character, spread its pairs into the boxes in order until only that 0 or 1 character remains. We call the position of the currently box after spreading each pair of the same characters as *pivot*. 
 > 2. From the *pivot*, spread the remaining character of each type of character (from *'a'* to *'z'*) to the last box. After spreading for the last box, if there are any characters left, we don't need to spread them again for the first boxes, because whether we do or not, the number of characters in them is also more than the number of characters in the last box, so it is not necessary. 
-> 3. If after the second step we still haven't spread to the last box, we can take one character from each box from the first box to the box immediately before the *pivot* to spread across the boxes from the current position to the end (because all characters in them appear even times). Actually this only needs to be handled by checking if the number of boxes from 1 to pivot - 1 is more than the current number of boxes to the last box in *O(1)*, if yes simply increase *box[k]* by *1*.
+> 3. If after the second step we still haven't spread to the last box, we can take one character from each box from the first box to the box immediately before the *pivot* to spread across the boxes from the current position to the end (because all characters in them appear even times). Actually this only needs to be handled by checking if the number of boxes from *1* to (*pivot - 1*) is more than the current number of boxes to the last box in *O(1)*, if yes simply increase *box[k]* by *1*.
 > 
 > Time complexity: *O(N)*.
+
+### [New Year and Counting Cards](https://codeforces.com/contest/908/problem/A)
+
+Tags: *adhoc*.
+> Consider all character in string, there are 2 cases:
+> - If the character is a number, we will increment the result by 1 if it is odd.
+> - If it is a letter, we will increment the result by 1 if it is a vowel.
+>
+> Time complexity: *O(len(str))*.
+
+### [New Year and Buggy Bot](https://codeforces.com/contest/908/problem/B)
+
+Tags: *graph traversal, adhoc*.
+> This is a basic graph problem, we just have to try all the mappings of digits to directions to count how many mapping would lead the robot to the exit. There are all *4!* ways to choose mapping.
+> Time complexity: *O(4! * |s|)*.
+
+### [New Year and Curling](https://codeforces.com/contest/908/problem/C)
+
+Tags: *geometry, adhoc*.
+> For each disk *i*, call *y[i]* is the *y-coordinate* of its center after pushed. Initially, y[i] = r (this is the case where *disk[i]* won't touch any disk). <br>
+> Iterate *j* from *1* to *(i - 1)* to check whether disk[i] will touches disk[j] when it slides or not. If not, simply continue. Otherwise, update: 
+> <center>y[i] = max( y[i], y[j] + sqrt(sqr(2 * r) - sqr(x[i] - x[j])) )</center>
+> 
+> Where *sqrt* = square root and *sqr* = square. The above geometrical formula is easy to prove.<br>
+> Time complexity: *O(N^2)*.
